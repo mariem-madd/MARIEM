@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Book Land</h1>
+        <p>Discover your next great read!</p>
+        <ul>
+          <li><a href="#home" id="home-link">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search books..."
+          oninput="searchBooks(this.value)"
+        />
+      </nav>
+    </header>
+
+    <main>
+      <section id="categories">
+        <h2>Book Categories</h2>
+        <div id="category-buttons">
+          <button onclick="filterBooks('Fiction')">Fiction</button>
+          <button onclick="filterBooks('Non-Fiction')">Non-Fiction</button>
+          <button onclick="filterBooks('Science')">Science</button>
+          <button onclick="filterBooks('Romance')">Romance</button>
+        </div>
+      </section>
+
+      <section id="book-display">
+        <h2>Books</h2>
+        <div id="book-container"></div>
+      </section>
+
+      <section id="book-details">
+        <h2>Book Details</h2>
+        <div id="details-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
